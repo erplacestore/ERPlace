@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ER Place Store | Feed de iPhones Atualizado 2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        blueviolet: {
+                            400: '#A5B4FC',
+                            500: '#6366F1',
+                            600: '#4338CA',
+                        },
+                        darkBg: '#050505',
+                        cardBg: '#111111',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #f3f4f6;
+        }
+
+        /* Glassmorphism */
+        .glass-nav {
+            background: rgba(5, 5, 5, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-section-header {
+            background: rgba(18, 18, 18, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366F1;
+        }
+
+        /* App Launcher Square Card Hover Effects */
+        .app-square-card {
+            aspect-ratio: 1 / 1.15;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 2rem;
+            background: linear-gradient(145deg, #141414 0%, #0a0a0a 100%);
+        }
+        
+        .app-square-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.9), 0 0 20px 2px rgba(99, 102, 241, 0.15);
+        }
+
+        /* Hide horizontal scrollbar */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-neutral-950 text-neutral-100 antialiased selection:bg-indigo-500 selection:text-black">
+
+    <!-- BARRA SUPERIOR DE AVISOS -->
+    <div class="bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-600 text-black font-extrabold text-[11px] uppercase tracking-widest text-center py-2 px-4 shadow-md flex items-center justify-center gap-3">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-truck-fast"></i> Envio com Seguro para todo o Brasil</span>
+        <span class="hidden sm:inline">•</span>
+        <span class="hidden sm:inline flex items-center gap-1.5"><i class="fa-solid fa-shield-halved"></i> Garantia 30 Dias ER Place Store</span>
+    </div>
+
+    <!-- CABEÇALHO FIXO -->
+    <header class="sticky top-0 z-40 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            
+            <!-- LOGO DA ER PLACE STORE -->
+            <a href="#" class="flex items-center gap-3 group shrink-0">
+                <div class="relative w-12 h-12 bg-black rounded-2xl border border-neutral-700 flex flex-col items-center justify-center shadow-2xl group-hover:border-indigo-500 transition-all overflow-hidden p-1">
+                    <div class="w-6 h-2 border-2 border-white border-b-0 rounded-t-full mb-[1px]"></div>
+                    <div class="w-full h-full bg-black border-2 border-white rounded-lg p-0.5 flex flex-col items-center justify-between">
+                        <div class="text-[10px] font-black text-white tracking-tighter leading-none mt-0.5 flex gap-[1px]">
+                            <span>&lt;&lt;</span>
+                        </div>
+                        <div class="flex items-end justify-center gap-[1.5px] w-full h-2.5 px-1 mb-0.5">
+                            <div class="w-[2px] h-2 bg-white rounded-full"></div>
+                            <div class="w-[2px] h-3 bg-white rounded-full"></div>
+                            <div class="w-[2px] h-1.5 bg-white rounded-full"></div>
+                            <div class="w-[2px] h-2.5 bg-white rounded-full"></div>
+                            <div class="w-[2px] h-3 bg-white rounded-full"></div>
+                            <div class="w-[2px] h-2 bg-white rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <span class="font-black text-xl tracking-tight text-white flex items-center gap-1.5">
+                        ER PLACE <span class="text-[10px] bg-gradient-to-r from-indigo-400 to-indigo-600 text-black px-1.5 py-0.5 rounded font-black tracking-widest uppercase">STORE</span>
+                    </span>
+                    <span class="text-[10px] text-neutral-400 tracking-wider">Tabela Atualizada (31/10/2026)</span>
+                </div>
+            </a>
+
+            <!-- BUSCA EM TEMPO REAL -->
+            <div class="hidden md:flex flex-1 max-w-md mx-4 relative">
+                <input type="text" id="searchInput" oninput="filterFeed()" placeholder="Buscar iPhone (ex: 17 Pro Max, 16 Pro, 15, 13...)" 
+                    class="w-full bg-neutral-900 text-sm text-neutral-200 placeholder-neutral-500 rounded-full py-2.5 pl-10 pr-4 border border-neutral-800 focus:outline-none focus:border-indigo-500 transition-all">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-neutral-500 text-xs"></i>
+            </div>
+
+            <!-- CARRINHO E WHATSAPP -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/5511916642694" target="_blank" class="hidden sm:flex items-center gap-2 text-xs font-bold bg-emerald-600/20 text-emerald-400 border border-emerald-500/40 px-4 py-2.5 rounded-full hover:bg-emerald-600 hover:text-white transition-all shadow-lg">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Atendimento</span>
+                </a>
+
+                <button onclick="toggleCart()" class="relative p-3 text-neutral-300 hover:text-indigo-400 bg-neutral-900 border border-neutral-800 hover:border-indigo-500/50 rounded-full transition-all">
+                    <i class="fa-solid fa-bag-shopping text-lg"></i>
+                    <span id="cartCount" class="absolute -top-1 -right-1 bg-indigo-500 text-black font-extrabold text-[11px] w-5 h-5 rounded-full flex items-center justify-center border-2 border-black">0</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- BARRA DE NAVEGAÇÃO DE ANOS -->
+        <div class="bg-neutral-950/90 border-t border-b border-neutral-800/60 py-2.5 px-4">
+            <div class="max-w-7xl mx-auto flex items-center gap-2 overflow-x-auto no-scrollbar text-xs">
+                <span class="text-[11px] font-bold text-indigo-500 uppercase tracking-wider mr-1 shrink-0 flex items-center gap-1">
+                    <i class="fa-solid fa-calendar-days"></i> ANOS:
+                </span>
+                <a href="#ano-2026" class="px-4 py-1.5 rounded-full bg-indigo-500 text-black font-black hover:opacity-90 transition-all shrink-0">2026 (Linha 17)</a>
+                <a href="#ano-2025" class="px-4 py-1.5 rounded-full bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-neutral-300 font-bold shrink-0">2025 (Linha 16)</a>
+                <a href="#ano-2024" class="px-4 py-1.5 rounded-full bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-neutral-300 font-bold shrink-0">2024 (Linha 15)</a>
+                <a href="#ano-2023" class="px-4 py-1.5 rounded-full bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-neutral-300 font-bold shrink-0">2023 (Linha 14)</a>
+                <a href="#ano-2022" class="px-4 py-1.5 rounded-full bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-neutral-300 font-bold shrink-0">2022 (Linha 13)</a>
+                <a href="#ano-2021" class="px-4 py-1.5 rounded-full bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-neutral-300 font-bold shrink-0">2021 (Linha 12)</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTAINER PRINCIPAL -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16" id="feedContainer">
+    </main>
+
+    <!-- TERMOS DE GARANTIA E AVISOS -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
+        <div class="bg-neutral-900/60 border border-neutral-800 rounded-3xl p-6 sm:p-8 space-y-4">
+            <h3 class="text-lg font-black text-white flex items-center gap-2">
+                <i class="fa-solid fa-triangle-exclamation text-amber-500"></i>
+                Termos & Informações Importantes sobre Seminovo / Swap
+            </h3>
+            <ul class="text-xs text-neutral-400 space-y-2 list-disc pl-4 leading-relaxed">
+                <li><strong class="text-neutral-200">Garantia:</strong> 7 dias para troca em caso de defeito de fabricação. Após 7 dias, assistência técnica até 30 dias.</li>
+                <li><strong class="text-neutral-200">Cobertura:</strong> Cobre problemas técnicos de funcionamento. Não cobre quedas, líquidos, danos físicos, marcas de mau uso, Face ID, bateria desgastada por uso contínuo, etc.</li>
+                <li><strong class="text-neutral-200">Selo de Segurança:</strong> A remoção ou violação do selo traseiro cancela a garantia sumariamente.</li>
+                <li><strong class="text-neutral-200">Envios:</strong> Envio com seguro obrigatório para garantia do transporte.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-neutral-800 pt-12 pb-8 text-neutral-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex items-center justify-center gap-2">
+                <span class="font-extrabold text-base text-white">ER PLACE STORE</span>
+            </div>
+            <p class="text-neutral-500 max-w-md mx-auto">Tabela Oficial ER Place Store - Atualizada com garantia de procedência e envio seguro para todo o Brasil.</p>
+            <p class="text-neutral-600">&copy; 2026 ER Place Store. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DO CARRINHO -->
+    <div id="cartModal" class="fixed inset-0 z-50 overflow-hidden hidden" role="dialog" aria-modal="true">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="toggleCart()"></div>
+        <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+            <div class="pointer-events-auto w-screen max-w-md bg-neutral-900 text-neutral-100 border-l border-neutral-800 flex flex-col shadow-2xl">
+                <div class="p-6 border-b border-neutral-800 flex items-center justify-between">
+                    <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-bag-shopping text-indigo-400"></i>
+                        <span>Meu Carrinho ER Place</span>
+                    </h2>
+                    <button onclick="toggleCart()" class="text-neutral-400 hover:text-white p-1">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+
+                <div class="flex-1 overflow-y-auto p-6 space-y-4" id="cartItemsContainer"></div>
+
+                <div class="p-6 border-t border-neutral-800 bg-neutral-950 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs text-neutral-400">Total do Pedido:</span>
+                        <span class="font-extrabold text-indigo-400 text-lg" id="cartTotal">R$ 0,00</span>
+                    </div>
+                    <button onclick="checkoutWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-4 rounded-xl flex items-center justify-center gap-2 transition-all text-sm uppercase tracking-wider shadow-lg">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Finalizar Pedido no WhatsApp</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT: ESTRUTURA ATUALIZADA COM +20% DE MARGEM DE LUCRO -->
+    <script>
+        // DADOS REAIS DO FORNECEDOR (31/10/2026) COM MARGEM DE +20%
+        const catalogByYear = [
+            {
+                year: 2026,
+                badge: "LANÇAMENTOS ATUAIS 2026",
+                description: "Linha iPhone 17 com 100% / Acima de 100% de bateria (eSIM)",
+                items: [
+                    { id: '17promax-512', name: "iPhone 17 Pro Max", price: 8700, storage: ["512GB"], colors: ["#ea580c", "#1d4ed8"], selectedStorage: "512GB", selectedColor: "#ea580c", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+17+Pro+Max", tag: "Acima 100% Bat" },
+                    { id: '17promax-256', name: "iPhone 17 Pro Max", price: 7500, storage: ["256GB"], colors: ["#ea580c", "#1d4ed8"], selectedStorage: "256GB", selectedColor: "#ea580c", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+17+Pro+Max", tag: "Acima 100% Bat" },
+                    { id: '17pro-256', name: "iPhone 17 Pro", price: 7200, storage: ["256GB"], colors: ["#ea580c", "#1d4ed8"], selectedStorage: "256GB", selectedColor: "#ea580c", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+17+Pro", tag: "Acima 100% Bat" },
+                    { id: '17-256', name: "iPhone 17", price: 5580, storage: ["256GB"], colors: ["#1c1c1e", "#1d4ed8", "#15803d", "#7e22ce", "#f3f4f6"], selectedStorage: "256GB", selectedColor: "#1c1c1e", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+17", tag: "Bateria 100%" },
+                    { id: '17air-256', name: "iPhone 17 Air", price: 5460, storage: ["256GB"], colors: ["#1d4ed8", "#eab308", "#1c1c1e"], selectedStorage: "256GB", selectedColor: "#1d4ed8", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+17+Air", tag: "Ultrafino 2026" }
+                ]
+            },
+            {
+                year: 2025,
+                badge: "LINHA 2025",
+                description: "iPhone 16 Series (eSIM / Físico) - Baterias Acima de 85%",
+                items: [
+                    { id: '16promax-256', name: "iPhone 16 Pro Max", price: 5880, storage: ["256GB"], colors: ["#1c1c1e", "#f3f4f6", "#c2a991", "#4b5563"], selectedStorage: "256GB", selectedColor: "#1c1c1e", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+16+Pro+Max", tag: "Acima de 87%" },
+                    { id: '16pro-256', name: "iPhone 16 Pro", price: 5280, storage: ["256GB"], colors: ["#c2a991", "#4b5563", "#1c1c1e"], selectedStorage: "256GB", selectedColor: "#c2a991", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+16+Pro", tag: "Acima de 85%" },
+                    { id: '16pro-128', name: "iPhone 16 Pro", price: 4740, storage: ["128GB"], colors: ["#c2a991", "#4b5563", "#1c1c1e", "#f3f4f6"], selectedStorage: "128GB", selectedColor: "#c2a991", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+16+Pro", tag: "Acima de 90%" },
+                    { id: '16plus-128', name: "iPhone 16 Plus", price: 4416, storage: ["128GB"], colors: ["#1c1c1e", "#1d4ed8", "#15803d"], selectedStorage: "128GB", selectedColor: "#1c1c1e", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+16+Plus", tag: "Acima de 85%" },
+                    { id: '16e-128', name: "iPhone 16e", price: 3000, storage: ["128GB"], colors: ["#1c1c1e", "#f3f4f6"], selectedStorage: "128GB", selectedColor: "#1c1c1e", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+16e", tag: "Acima de 90%" },
+                    { id: '16-128', name: "iPhone 16", price: 4260, storage: ["128GB"], colors: ["#1d4ed8", "#1c1c1e", "#ec4899", "#f3f4f6"], selectedStorage: "128GB", selectedColor: "#1d4ed8", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+16", tag: "Acima de 90%" }
+                ]
+            },
+            {
+                year: 2024,
+                badge: "LINHA 2024",
+                description: "iPhone 15 Series - USB-C e Baterias Acima de 85%",
+                items: [
+                    { id: '15promax-256', name: "iPhone 15 Pro Max", price: 4788, storage: ["256GB"], colors: ["#1c1c1e", "#1d4ed8", "#4b5563", "#f3f4f6"], selectedStorage: "256GB", selectedColor: "#1c1c1e", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+15+Pro+Max", tag: "Acima de 85%" },
+                    { id: '15pro-1tb', name: "iPhone 15 Pro", price: 4668, storage: ["1TB"], colors: ["#4b5563", "#1d4ed8"], selectedStorage: "1TB", selectedColor: "#4b5563", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+15+Pro+1TB", tag: "Super Storage" },
+                    { id: '15pro-512', name: "iPhone 15 Pro", price: 4440, storage: ["512GB"], colors: ["#1c1c1e", "#1d4ed8"], selectedStorage: "512GB", selectedColor: "#1c1c1e", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+15+Pro", tag: "Acima de 85%" },
+                    { id: '15pro-256', name: "iPhone 15 Pro", price: 4188, storage: ["256GB"], colors: ["#1d4ed8"], selectedStorage: "256GB", selectedColor: "#1d4ed8", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+15+Pro", tag: "Acima de 85%" },
+                    { id: '15pro-128', name: "iPhone 15 Pro", price: 4080, storage: ["128GB"], colors: ["#1d4ed8", "#4b5563", "#1c1c1e", "#f3f4f6"], selectedStorage: "128GB", selectedColor: "#1d4ed8", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+15+Pro", tag: "Acima de 85%" },
+                    { id: '15plus-128', name: "iPhone 15 Plus", price: 3120, storage: ["128GB"], colors: ["#1c1c1e"], selectedStorage: "128GB", selectedColor: "#1c1c1e", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+15+Plus", tag: "Acima de 85%" },
+                    { id: '15-128', name: "iPhone 15", price: 3060, storage: ["128GB"], colors: ["#1c1c1e", "#ec4899", "#1d4ed8", "#15803d", "#eab308"], selectedStorage: "128GB", selectedColor: "#1c1c1e", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+15", tag: "Acima de 85%" }
+                ]
+            },
+            {
+                year: 2023,
+                badge: "LINHA 2023",
+                description: "iPhone 14 Series - Baterias Acima de 82%",
+                items: [
+                    { id: '14promax-256', name: "iPhone 14 Pro Max", price: 4020, storage: ["256GB"], colors: ["#7e22ce", "#1c1c1e"], selectedStorage: "256GB", selectedColor: "#7e22ce", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+14+Pro+Max", tag: "Acima de 86%" },
+                    { id: '14promax-128', name: "iPhone 14 Pro Max", price: 3660, storage: ["128GB"], colors: ["#1c1c1e", "#7e22ce", "#f3f4f6", "#eab308"], selectedStorage: "128GB", selectedColor: "#1c1c1e", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+14+Pro+Max", tag: "Acima de 86%" },
+                    { id: '14pro-256', name: "iPhone 14 Pro", price: 3420, storage: ["256GB"], colors: ["#7e22ce", "#1c1c1e", "#f3f4f6"], selectedStorage: "256GB", selectedColor: "#7e22ce", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+14+Pro", tag: "Acima de 83%" },
+                    { id: '14pro-128', name: "iPhone 14 Pro", price: 3180, storage: ["128GB"], colors: ["#7e22ce", "#1c1c1e", "#eab308", "#f3f4f6"], selectedStorage: "128GB", selectedColor: "#7e22ce", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+14+Pro", tag: "Acima de 83%" },
+                    { id: '14plus-128', name: "iPhone 14 Plus", price: 2520, storage: ["128GB"], colors: ["#1c1c1e", "#b91c1c", "#c084fc", "#1d4ed8", "#eab308"], selectedStorage: "128GB", selectedColor: "#1c1c1e", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+14+Plus", tag: "Acima de 82%" },
+                    { id: '14-256', name: "iPhone 14", price: 2580, storage: ["256GB"], colors: ["#f3f4f6", "#c084fc", "#1d4ed8", "#1c1c1e", "#b91c1c"], selectedStorage: "256GB", selectedColor: "#f3f4f6", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+14", tag: "Acima de 85%" },
+                    { id: '14-128', name: "iPhone 14", price: 2280, storage: ["128GB"], colors: ["#c084fc", "#1d4ed8", "#eab308", "#1c1c1e", "#b91c1c"], selectedStorage: "128GB", selectedColor: "#c084fc", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+14", tag: "Acima de 85%" }
+                ]
+            },
+            {
+                year: 2022,
+                badge: "LINHA 2022",
+                description: "iPhone 13 Series - Baterias Acima de 83%",
+                items: [
+                    { id: '13promax-128', name: "iPhone 13 Pro Max", price: 3096, storage: ["128GB"], colors: ["#1c1c1e", "#1d4ed8", "#15803d"], selectedStorage: "128GB", selectedColor: "#1c1c1e", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+13+Pro+Max", tag: "Acima de 85%" },
+                    { id: '13pro-512', name: "iPhone 13 Pro", price: 3180, storage: ["512GB"], colors: ["#eab308", "#f3f4f6"], selectedStorage: "512GB", selectedColor: "#eab308", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+13+Pro", tag: "Acima de 83%" },
+                    { id: '13pro-256', name: "iPhone 13 Pro", price: 3060, storage: ["256GB"], colors: ["#1c1c1e", "#1d4ed8", "#15803d", "#f3f4f6"], selectedStorage: "256GB", selectedColor: "#1c1c1e", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+13+Pro", tag: "Acima de 83%" },
+                    { id: '13pro-128', name: "iPhone 13 Pro", price: 2880, storage: ["128GB"], colors: ["#1d4ed8", "#15803d"], selectedStorage: "128GB", selectedColor: "#1d4ed8", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+13+Pro", tag: "Acima de 83%" },
+                    { id: '13-512', name: "iPhone 13", price: 2460, storage: ["512GB"], colors: ["#b91c1c", "#1d4ed8", "#15803d"], selectedStorage: "512GB", selectedColor: "#b91c1c", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+13", tag: "Acima de 84%" },
+                    { id: '13-256', name: "iPhone 13", price: 2400, storage: ["256GB"], colors: ["#15803d", "#1d4ed8", "#1c1c1e", "#ec4899", "#f3f4f6"], selectedStorage: "256GB", selectedColor: "#15803d", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+13", tag: "Acima de 84%" },
+                    { id: '13-128', name: "iPhone 13", price: 2100, storage: ["128GB"], colors: ["#15803d", "#1d4ed8", "#1c1c1e", "#ec4899", "#f3f4f6"], selectedStorage: "128GB", selectedColor: "#15803d", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+13", tag: "Acima de 84%" },
+                    { id: '13mini-256', name: "iPhone 13 mini", price: 1920, storage: ["256GB"], colors: ["#15803d", "#1d4ed8", "#1c1c1e", "#ec4899", "#f3f4f6"], selectedStorage: "256GB", selectedColor: "#15803d", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+13+mini", tag: "Acima de 84%" }
+                ]
+            },
+            {
+                year: 2021,
+                badge: "LINHA CLÁSSICA 2021",
+                description: "iPhone 12 Series",
+                items: [
+                    { id: '12-128', name: "iPhone 12", price: 1740, storage: ["128GB"], colors: ["#f3f4f6", "#c084fc", "#1d4ed8", "#1c1c1e", "#15803d"], selectedStorage: "128GB", selectedColor: "#f3f4f6", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+12", tag: "Acima de 83%" },
+                    { id: '12-64', name: "iPhone 12", price: 1500, storage: ["64GB"], colors: ["#f3f4f6", "#15803d", "#7e22ce", "#1c1c1e", "#1d4ed8"], selectedStorage: "64GB", selectedColor: "#f3f4f6", img: "https://placehold.co/300x300/080808/FFFFFF?text=iPhone+12", tag: "Bateria 100%" }
+                ]
+            }
+        ];
+
+        let cart = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFeed(catalogByYear);
+        });
+
+        // RENDERIZAÇÃO DO FEED VERTICAL
+        function renderFeed(data) {
+            const container = document.getElementById('feedContainer');
+            container.innerHTML = data.map(block => `
+                <section id="ano-${block.year}" class="scroll-mt-36 space-y-6">
+                    <!-- CABEÇALHO DA SEÇÃO -->
+                    <div class="glass-section-header p-5 rounded-3xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xl">
+                        <div>
+                            <span class="text-xs font-black text-indigo-400 uppercase tracking-widest block">${block.badge}</span>
+                            <h2 class="text-2xl sm:text-3xl font-black text-white">Modelos ${block.year}</h2>
+                            <p class="text-xs text-neutral-400 mt-0.5">${block.description}</p>
+                        </div>
+                        <span class="text-xs font-mono font-bold bg-neutral-900 border border-neutral-800 text-neutral-300 px-3 py-1.5 rounded-full">
+                            ${block.items.length} Modelo(s)
+                        </span>
+                    </div>
+
+                    <!-- GRADE DE CARDS DA LOJA -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                        ${block.items.map(item => {
+                            const pixPrice = Math.round(item.price * 0.9); // Calc 10% OFF no PIX
+                            return `
+                            <div class="app-square-card border border-neutral-800 p-4 flex flex-col justify-between relative group">
+                                <span class="absolute top-3 left-3 bg-neutral-900/90 text-indigo-400 border border-indigo-500/30 text-[9px] font-black px-2 py-0.5 rounded-full uppercase">
+                                    ${item.tag}
+                                </span>
+
+                                <!-- Imagem Quadrada -->
+                                <div class="w-full h-32 sm:h-36 my-2 flex items-center justify-center">
+                                    <img src="${item.img}" alt="${item.name}" class="h-full object-contain group-hover:scale-105 transition-all">
+                                </div>
+
+                                <!-- Detalhes do Produto -->
+                                <div class="space-y-1.5">
+                                    <h3 class="font-black text-white text-sm sm:text-base leading-tight">${item.name}</h3>
+
+                                    <!-- Seleção de GBs -->
+                                    <div class="flex items-center gap-1">
+                                        ${item.storage.map(st => `
+                                            <button onclick="changeStorage('${item.id}', '${st}')" class="text-[9px] px-1.5 py-0.5 rounded font-bold ${item.selectedStorage === st ? 'bg-indigo-500 text-black' : 'bg-neutral-900 text-neutral-400 border border-neutral-800'}">
+                                                ${st}
+                                            </button>
+                                        `).join('')}
+                                    </div>
+
+                                    <!-- Seleção de Cores -->
+                                    <div class="flex items-center gap-1.5 pt-1">
+                                        ${item.colors.map(c => `
+                                            <span onclick="changeColor('${item.id}', '${c}')" class="w-3.5 h-3.5 rounded-full border border-neutral-700 cursor-pointer ${item.selectedColor === c ? 'ring-2 ring-indigo-500' : ''}" style="background-color: ${c};"></span>
+                                        `).join('')}
+                                    </div>
+                                </div>
+
+                                <!-- Preço e Botão Adicionar -->
+                                <div class="mt-3 pt-2 border-t border-neutral-800/80 flex items-end justify-between">
+                                    <div>
+                                        <span class="text-[8px] text-emerald-400 font-bold block uppercase">PIX 10% OFF: R$ ${pixPrice.toLocaleString('pt-BR')}</span>
+                                        <div class="text-sm sm:text-base font-black text-white">R$ ${item.price.toLocaleString('pt-BR')}</div>
+                                    </div>
+                                    <button onclick="addToCart('${item.id}')" class="bg-gradient-to-r from-indigo-400 to-indigo-600 hover:opacity-90 text-black font-extrabold p-2.5 rounded-xl text-xs transition-all shadow-md">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        `}).join('')}
+                    </div>
+                </section>
+            `).join('');
+        }
+
+        // SELEÇÃO DINÂMICA DENTRO DO CARD QUADRADO
+        function changeStorage(itemId, st) {
+            catalogByYear.forEach(block => {
+                const item = block.items.find(i => i.id === itemId);
+                if (item) item.selectedStorage = st;
+            });
+            filterFeed();
+        }
+
+        function changeColor(itemId, color) {
+            catalogByYear.forEach(block => {
+                const item = block.items.find(i => i.id === itemId);
+                if (item) item.selectedColor = color;
+            });
+            filterFeed();
+        }
+
+        // FILTRO DE BUSCA NO FEED
+        function filterFeed() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            if (!query) {
+                renderFeed(catalogByYear);
+                return;
+            }
+
+            const filteredData = catalogByYear.map(block => ({
+                ...block,
+                items: block.items.filter(item => item.name.toLowerCase().includes(query) || item.selectedStorage.toLowerCase().includes(query))
+            })).filter(block => block.items.length > 0);
+
+            renderFeed(filteredData);
+        }
+
+        // CARRINHO & CHECKOUT
+        function toggleCart() {
+            document.getElementById('cartModal').classList.toggle('hidden');
+        }
+
+        function addToCart(itemId) {
+            let foundItem = null;
+            catalogByYear.forEach(block => {
+                const i = block.items.find(item => item.id === itemId);
+                if (i) foundItem = i;
+            });
+
+            if (!foundItem) return;
+
+            const cartKey = `${foundItem.id}-${foundItem.selectedStorage}`;
+            const existing = cart.find(c => c.cartKey === cartKey);
+
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ ...foundItem, cartKey, qty: 1 });
+            }
+
+            updateCartUI();
+            toggleCart();
+        }
+
+        function updateCartUI() {
+            const count = document.getElementById('cartCount');
+            const container = document.getElementById('cartItemsContainer');
+            const totalEl = document.getElementById('cartTotal');
+
+            const totalQty = cart.reduce((acc, i) => acc + i.qty, 0);
+            count.innerText = totalQty;
+
+            const totalSum = cart.reduce((acc, i) => acc + (i.price * i.qty), 0);
+            totalEl.innerText = `R$ ${totalSum.toLocaleString('pt-BR')}`;
+
+            if (cart.length === 0) {
+                container.innerHTML = `<p class="text-xs text-neutral-500 text-center py-10">Carrinho vazio.</p>`;
+                return;
+            }
+
+            container.innerHTML = cart.map(item => `
+                <div class="flex items-center justify-between bg-neutral-950 p-3 rounded-xl border border-neutral-800">
+                    <div>
+                        <h4 class="text-xs font-bold text-white">${item.name}</h4>
+                        <span class="text-[10px] text-neutral-400">${item.selectedStorage}</span>
+                        <span class="text-xs font-bold text-indigo-400 block">R$ ${item.price.toLocaleString('pt-BR')}</span>
+                    </div>
+                    <span class="text-xs font-bold text-neutral-300">x${item.qty}</span>
+                </div>
+            `).join('');
+        }
+
+        function checkoutWhatsApp() {
+            if (cart.length === 0) return;
+            let msg = `📱 *PEDIDO ER PLACE STORE (Tabela 31/10/2026)*\n\n`;
+            cart.forEach(i => {
+                msg += `• *${i.name}* (${i.selectedStorage}) x${i.qty} - R$ ${i.price.toLocaleString('pt-BR')}\n`;
+            });
+            window.open(`https://wa.me/5511916642694?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
